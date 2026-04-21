@@ -1,0 +1,10 @@
+
+applet/
+*.elf
+*.hex
+*.o
+
+.DS_Store
+Thumbs.db
+
+*.gcode
