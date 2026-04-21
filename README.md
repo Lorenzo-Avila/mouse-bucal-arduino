@@ -220,19 +220,6 @@ if (digitalRead(selPin) == 0 && !mouseClickFlag) {
 }
 ```
 
-### Pontos Críticos Identificados
-
-| # | Problema | Impacto |
-|---|---|---|
-| 1 | **Sem zona morta (deadzone)** | Qualquer ruído no ADC move o cursor continuamente |
-| 2 | **`Serial.begin(9600)` ativo em produção** | Consome memória e ciclos de CPU desnecessariamente |
-| 3 | **Comentários com eixos X/Y trocados** | Dificulta manutenção futura |
-| 4 | **`INPUT` sem `PULLUP` no `selPin`** | Leituras flutuantes quando o botão não está pressionado |
-| 5 | **Sem suporte a clique direito** | Limita usabilidade (sem acesso a menus contextuais) |
-| 6 | **Calibração apenas no boot** | Deriva térmica dos potenciômetros não é compensada |
-
----
-
 ## 🖨️ Modelo 3D
 
 - **Formato:** STL Binário
